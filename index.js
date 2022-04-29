@@ -45,6 +45,7 @@ async function run() {
             const result = await carCollection.deleteOne(query);
             res.send(result);
         })
+
     }
 
     finally {
@@ -61,6 +62,10 @@ run().catch(console.dir);
 app.get('/', (req, res) => {
     res.send('Bismillahir Rahmanir rahim');
 });
+
+app.get('/rafi',(req,res) =>{
+    res.send('My dear wife How are you?')
+})
 
 app.listen(port, () => {
     console.log('Allahu Akbar', port)
